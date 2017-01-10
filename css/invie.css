@@ -1,0 +1,695 @@
+/*Fuentes*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?7qm83a');
+  src:  url('../fonts/icomoon.eot?7qm83a#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?7qm83a') format('truetype'),
+    url('../fonts/icomoon.woff?7qm83a') format('woff'),
+    url('../fonts/icomoon.svg?7qm83a#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-menu:before {
+  content: "\e9bd";
+}
+.icon-close:before {
+  content: "\ea0d";
+}
+
+/*Fin fuentes*/
+
+/*
+*
+{
+  padding: 10px;
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+  padding:10px 15px 20px 25px
+  border: 5px solid red;
+  margin: 41px;
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  margin-left: 25px;
+  margin:10px 15px 20px 25px
+}
+*/
+
+body
+{
+  font-family: 'Allerta', sans-serif;
+  margin: 0;
+  /*width: 800px;
+  margin: auto;*/
+}
+
+table
+{
+  width: 100%;
+}
+
+th
+{
+  background: #273b47;
+  color: white;
+  padding: 10px 20px;
+  text-align: left;
+}
+
+td
+{
+    padding: 20px;
+}
+
+table, th, td
+{
+  border: 1px solid #273b47;
+  border-collapse: collapse;
+}
+
+footer
+{
+  background: #273b47;
+  padding: 50px 10px;
+}
+
+footer .contenedor
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+input, textarea
+{
+  outline: 0;
+}
+
+input:focus, textarea:focus
+{
+  background: lightgrey;
+}
+
+.background
+{
+  background-color: #324d5e;
+  background-image: url('../images/background.png');
+  background-size: cover;
+}
+
+.contenedor
+{
+  /*width: 800px;*/
+  /*width 100% porque su tamaño se ve influido por su margen, padding y border*/
+  max-width: 800px; /*Cambiamos el ancho fijo del contenedor por uno reajustable*/
+  margin: auto;
+  position: relative;/*Para que las posiciones absolutas de los hijos se adapten*/
+}
+
+.button
+{
+  border-radius: 12px;
+  /*background: #ff5d4f;*/
+  color: white;
+  border: none;
+  text-decoration: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  background: linear-gradient(to left, #fe344e, #ff7250);
+}
+.titulo
+{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 70px;
+  margin-bottom: 0;
+}
+
+.titulo span
+{
+  text-decoration: underline;
+}
+
+.title-a
+{
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.guitarras
+{
+  color: #1F313C;
+  margin-bottom: 50px;
+  /*width: 800px;
+  margin: auto;*/
+}
+
+.guitarras h2 /*Selector descendente*/
+{
+  font-size: 35px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title-b
+{
+  font-size: 50px;
+}
+
+/*.imagen
+{
+  background-image: url('../images/background.png');
+}*/
+.portada
+{
+  color: white;/*Hereda el color blanco a los textos de esa seccion*/
+  padding: 20px;
+  height: 500px;
+  /*width: 800px;
+  margin: auto;*/
+}
+
+.portada button
+{
+  font-size: 18px;
+  margin-bottom: 130px;
+}
+
+.menu
+{
+  font-size: 24px;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+}
+
+.menu li
+{
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.logotipo
+{
+  margin-left: 0;
+  display: inline-block;
+}
+
+.header
+{
+  /*width: 800px;
+  margin: auto;*/
+  position: relative;
+}
+
+.derecha
+{
+  float: right;
+  position: relative;
+  top: -97px;
+}
+
+.izquierda
+{
+  float: left;
+  position: relative;
+}
+
+.guitarra
+{
+  /*overflow: hidden;*/
+  border: 1px solid #1F313C;
+  padding: 10px;
+  margin: 10px 10px 40px 10px;
+  border-radius: 8px;
+}
+
+.guitarra.b
+{
+    height: 200px;
+}
+
+.contenedor-guitarra-a
+{
+    margin-left:20px;
+}
+
+.contenedor-guitarra-b
+{
+    margin-left:370px;
+    position: relative;
+    bottom: 50px;
+}
+
+.contacto
+{
+  display: flex;
+  /*flex-direction: column;*/
+  width: 300px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  height: 200px;
+}
+
+.contacto img
+{
+  display: block;
+}
+
+.contacto strong
+{
+  display: block;
+}
+
+.contacto a
+{
+  color:white;
+  text-decoration: none; /*Quita hipervinculo del enlace*/
+  margin: 10px 5px 60px 0px;
+  font-size: 14px;
+}
+
+.formulario
+{
+  display: flex;
+  width: 500px;
+  color: white;
+}
+
+.col1, .col2
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.col1
+{
+  margin-right: 15px;
+}
+
+.col2
+{
+    align-items: flex-start;
+}
+
+.col2 textarea
+{
+  margin-bottom: 10px;
+}
+
+.formulario label
+{
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.sexo, .intereses
+{
+  margin-bottom: 10px;
+}
+
+.sexo
+{
+  margin-top: 10px;
+}
+
+.menu li:before
+{
+  content: "»";
+  color: white;
+  /*line-height: 20px;*/
+}
+
+.menu a
+{
+  color: white;
+  text-decoration: none;
+}
+
+.tabla
+{
+  margin: 50px 0;
+}
+
+.burger-button
+{
+  color: white;
+  width: 40px;
+  height: 40px;
+  background: #395667;
+  border-radius: 50px;
+  /*Centra el icono en el fondo*/
+  display: none;
+  text-align: center;
+  line-height: 40px;
+  /*Posicionar el elemento de manera absoluta respecto al contenedor más proximo con pisición relativa*/
+  position: absolute;
+  left: 20px;
+  top:20px;
+  cursor: pointer;
+
+  z-index: 3;
+
+}
+
+.tabla .contenedor
+{
+  overflow: auto;
+}
+
+/*--Desde 0 hasta 800px--*/
+@media screen and (max-width: 800px) /*IPAD*/
+{
+
+  /* Reajustar el ancho fijo de contenedor por unoajustable
+  .contenedor
+  {
+    width: auto;
+    max-width: 800px;
+  }*/
+
+  /*Portada*/
+  .titulo
+  {
+    font-size: 45px;
+    margin-top: 30px;
+  }
+
+  .titulo-a
+  {
+    font-size: 18px;
+  }
+
+  .portada
+  {
+    height: auto;/*Resetar alto establecido*/
+  }
+
+  .portada .button
+  {
+    margin-bottom: 30px;
+    display: inline-block; /*Se cambia su display para respetar los ma  rgenes*/
+  }
+  /*Fin portada*/
+
+  /*Guitarras*/
+  .guitarras
+  {
+    text-align: center;
+  }
+
+  .izquierda, .derecha
+  {
+    /*Reseteamos valores*/
+    float: none;
+    position: static; /*posicion de elementos por defecto*/
+  }
+
+  .title-b
+  {
+    margin: 0;
+  }
+
+  .guitarra li
+  {
+    list-style: none;
+  }
+
+  .guitarra.b
+  {
+    height: auto;
+  }
+
+  .contenedor-guitarra-b
+  {
+    margin-left: 0;
+    position: static;
+  }
+
+  .contenedor-guitarra-a
+  {
+    margin-left: 0;
+  }
+
+  .guitarras ol
+  {
+    padding: 0;
+  }
+  /*Fin guitarras*/
+
+  /*Tabla*/
+  .tabla .contenedor
+  {
+    overflow: auto;
+    margin: 50px 10px;
+  }
+  /*Fin tabla*/
+}
+
+@media screen and (max-width: 767px) /*Un pixel menor que IPAD*/
+{
+  /*Footer*/
+  .footer .contenedor
+  {
+    display: block;
+  }
+
+  .footer .contacto
+  {
+    margin: auto;
+  }
+
+  .footer .formulario
+  {
+    display: block;
+    margin: auto;
+    width: 300px;
+  }
+
+  .intereses label
+  {
+    display: block;
+  }
+
+  .col1
+  {
+    margin: 0;
+  }
+
+  input[type="text"],/*Selector de atributo*/
+  input[type="email"]
+  {
+    font-size: 16px;
+    padding: 5px;
+  }
+
+  input[type="radio"],/*Selector de atributo*/
+  input[type="checkbox"]
+  {
+    zoom: 1.5;
+  }
+
+  .col1 label
+  {
+    font-size: 15px;
+  }
+  textarea
+  {
+    width: 100%;
+  }
+  /*Fin footer*/
+
+}
+
+@media screen and (max-width: 650px)
+{
+  .menu
+  {
+    /*border: 10px solid red;*/
+    position: static;
+    display: block;
+    text-align: center;
+  }
+
+  .logotipo
+  {
+    display: block;
+    text-align: center;
+    margin: 0;
+  }
+
+  .menu li:first-child /*Pseudo clase que solo afect al primer li*/
+  {
+    margin: 0;
+  }
+
+  .menu ul
+  {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width:500px) /*Celular*/
+{
+  /*Portada*/
+  .burger-button
+  {
+    display: block;
+    position: fixed;
+  }
+  .menu
+  {
+    /*background: #ff3c58;*/
+    background: rgba(255, 60, 88, .8);
+    position: fixed;
+    left: -100%;/*Opcion para ocularlo de la pantalla*/
+    top: 0;
+    z-index: 2;/*Para position absolute, relative y fixed*/
+    /*Truco para estirar el backgorun al ancho y alto completo de la pnatalla*/
+    bottom: 0;
+    right: 0;
+    /*Alinear menu al centro de la pantalla con Flex*/
+    display: flex;
+    align-items: center;
+
+    /*Aplicar un ancho determinado al menu para realizar el efecto de mover sino solo se moveria el contenido*/
+    width: 100%;
+
+    /*Trancision necesaria para mover adecuadamente el menu a la izquierda*/
+    transition: .3s;
+  }
+
+  .menu.active
+  {
+    left: 0;
+  }
+
+  .menu ul
+  {
+    flex: 1;/*Ocupar todo el ancho de la pantalla como unico hijo del display flex*/
+  }
+  /*Reseteamos el valor de posicio del contenedor del menu para que aplique la posicion absoulta left:0 top:0*/
+  .header
+  {
+    position: static;
+  }
+  .header .contenedor
+  {
+    position: static;
+  }
+  .portada .contenedor
+  {
+    position: static;
+  }
+  .menu li
+  {
+    display: block;
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid white;
+  }
+
+  .menu li:first-child
+  {
+    border-top: 1px solid white;
+  }
+
+  .menu li::before
+  {
+    display: none;
+  }
+
+  .portada
+  {
+    text-align: center;
+  }
+
+  .portada .button
+  {
+    display: block;
+  }
+
+  .titulo
+  {
+    font-size: 39px;
+  }
+
+  .title-a
+  {
+    font-size: 15px;
+  }
+
+  .guitarra img
+  {
+    width: 300px;
+  }
+  /*Fin portada*/
+
+  /*Guitarras*/
+  .guitarra img
+  {
+    width: 200px;
+    /*height: auto; SI la imagen tuviera un alto como atributo*/
+  }
+
+  .title-b
+  {
+    font-size: 30px;
+  }
+  /*Fin guitarras*/
+
+  /*Footer*/
+  .col2
+  {
+    align-items: stretch;
+  }
+  /*Fin footer*/
+}
+
+/*Iframe responsive*/
+.contenedor-iframe
+{
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.iframe
+{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*Media query para pantallas con display retina*/
+@media screen and (-webkit-min-device-pixel-ratio: 2)
+{
+  .background
+  {
+    background-image: url('../images/background2x.png');
+  }
+}
