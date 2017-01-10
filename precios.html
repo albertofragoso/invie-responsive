@@ -104,14 +104,32 @@
         </form>
       </div>
     </footer>
+    <!--Libreria de carga dinamica de imagenes-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js"></script>
+    <!--Librearia de gestos touch para moviles-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
     <script>
       var $burgerButton = document.getElementById('burger-button');
       var $menu = document.getElementById('menu');
-      var $retina = window.devicePixelRatio;//variable para obtener que tipo de display tenemos
+      var $retina = window.devicePixelRatio;//Variable para obtener que tipo de display tenemos
       //Crear media querys con js
       var $consulta = window.matchMedia('(max-width: 500px)');
       $consulta.addListener(mediaQuery);
+
+      function toggleMenu()
+      {
+        $menu.classList.toggle("active");
+      };
+
+      function showMenu()
+      {
+        $menu.classList.add("active");
+      }
+
+      function hideMenu()
+      {
+        $menu.classList.remove("active");
+      }
 
       function mediaQuery()
       {
@@ -119,20 +137,25 @@
           {
             console.log("Menor a 500px");
             /*Agreamos el escucha a y la clase a burgerButton*/
-            $burgerButton.addEventListener('touchstart', function(){
-              $menu.classList.toggle("active");
-            });
+            $burgerButton.addEventListener('touchstart',toggleMenu);
+            /*$burgerButton.addEventListener('click',toggleMenu);*/
           }
           else //False
           {
             console.log("Mayor de 500px");
             /*Quitamos el escucha y la clase a burgerButton*/
-            $burgerButton.removeEventListener('touchstart', function(){
-              $menu.classList.toggle("active");
-            });
+            $burgerButton.removeEventListener('touchstart', toggleMenu);
+            /*$burgerButton.removeEventListener('click', toggleMenu);*/
           }
       }
       mediaQuery(); //Ejecutamos la funcion desde la carga de la pagina
+
+      /*GESTOS TOUCH*/
+      var $body = document.body; //Llamar a body sin id
+
+      var gestos = new Hammer($body);
+      gestos.on('swipeleft', hideMenu);
+      gestos.on('swiperight', showMenu);
 
       //Lazy loading
       var bLazy = new Blazy({
