@@ -553,6 +553,11 @@ input:focus, textarea:focus
 @media screen and (max-width:500px) /*Celular*/
 {
   /*Portada*/
+  #precios .header
+  {
+    padding: 20px;
+  }
+
   .burger-button
   {
     display: block;
